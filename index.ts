@@ -30,7 +30,7 @@ app.get('/amtrakstatus',async (req:express.Request, res:express.Response) => {
 });
     //console.log(resp);
     const data = await resp.text();
-
+    res.set('Content-Type', 'application/json');
     res.send(data);
 });
 
